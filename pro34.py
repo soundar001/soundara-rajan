@@ -1,5 +1,4 @@
 import sys, string, math
-
 def maxAltSeq(s) :
     c = s[0]
     L = [c]
@@ -15,7 +14,7 @@ def maxAltSeq(s) :
             c = s[i]
             L = [c]
         s1 = ''.join(maxL)
-        #print(i,s1,s[i])
+    
     s2 = ''.join(maxL)
     i1 = s.index(s2)
     i2 = i1 + len(s2) - 1
@@ -25,7 +24,7 @@ def cherry2(s) :
     L = list(s)
     n = len(s)
     i1,i2,x = maxAltSeq(s)
-    #print(s,'x=',x,i1,i2)
+
     sum1 = 0
     if i1 > 0 :
         c = s[i1]
@@ -56,7 +55,7 @@ def cherry2(s) :
             else :
                 c = s[k1]
         s3 = ''.join(L)
-        #print('cherry2 : ',s,s3,sum1)
+       
     return sum1
 
 n,k = input().split()
