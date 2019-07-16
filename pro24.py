@@ -4,9 +4,9 @@ k1 = 2**n1
 L = []
 for i in range(0,k1) :
     s1 = bin(i)[2:]
-    j1 = len(s)
+    j1 = len(s1)
     if j < n1 :
-        s = '0' * (n1-j) + s
-    L.append(s)
+        s1 = '0' * (n1-j) + s
+    L.append(s1)
 for i in range(0,len(L)) :
     print(L[i])
