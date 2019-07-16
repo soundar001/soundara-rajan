@@ -1,7 +1,7 @@
 import sys, string, math
 
 n,k1 = input().split()
-n,k1 = int(n),int(k)
+n,k1 = int(n),int(k1)
 L = [ int(x) for x in input().split()]
 L.sort()
 cnt = 0
