@@ -7,4 +7,4 @@ for i in range(len(L1)) :
         print(L1[i])
         flags = 0
         break
-if flag == 1 : print('unique')
+if flags == 1 : print('unique')
