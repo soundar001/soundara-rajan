@@ -5,7 +5,7 @@ L = []
 for i in range(0,k1) :
     s1 = bin(i)[2:]
     j1 = len(s1)
-    if j < n1 :
+    if j1 < n1 :
         s1 = '0' * (n1-j) + s1
     L.append(s1)
 for i in range(0,len(L)) :
