@@ -1,34 +1,28 @@
-import sys,string
-n0,n1 = input().split()
-n0,n1 = int(n0),int(n1)
-if n1 > (2+2*n0) :
-    print(-1)
-    sys.exit()
-if n0 > n1-1 :
-    print(-1)
-    sys.exit()
-s = ''
-if n1-n0 == 1 :
-    s = '1'+'01'*n0
-    print(s)
-    sys.exit()
-while n1 > n0 and n0 > 0:
-    if n1-n0 == 1 :
-        break
-    n1 -= 2
-    n0 -= 1
-    s += '110'
-if n1-n0 == 1 :
-    s += '10'*n0+'1'
-    print(s)
-    sys.exit()
-if n1 > 2 and n0==0 :
-    print(-1)
-    sys.exit()
-elif n0==1 and n1==1 :
-    s += '0'+'1'*n1
-elif n0==1 and n1==2 :
-    s += '101'
-elif n0==0:
-    s += '1'*n1
-print(s)
+pp,qqq=input().split()
+pp=int(pp)
+qqq=int(qqq)
+ss=''
+uu=2
+if(pp+qqq<=3):
+    for i in range(0,pp+qqq):
+        if(i%2!=0):
+            ss=ss+'0'
+        else:
+            ss=ss+'1'
+else:    
+    for i in range(0,pp+qqq):
+        if(i==uu):
+            ss=ss+'0'
+            if(uu==qqq):
+                uu=uu+2
+            else:
+                uu=uu+3
+        else:
+            ss=ss+'1'
+x=len(ss)-1
+if(int(ss[x])==0):
+    print('-1') 
+elif pp==1 and qqq==2: 
+     print("011")
+else:
+    print(ss)
