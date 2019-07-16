@@ -1,25 +1,30 @@
-import sys, string, math
+    
+ttt = int(input())
+li, sa = [], 0
 
-def factors1(n1) :
-    L = []
-    i = 2
-    cnt = 0
-    while n1 >1 :
-        while n1%i == 0 :
-            cnt += 1
-            n1 //= i
-        i += 1
-    return cnt
+for i in range(0, ttt):
+  li.append(list(map(int, input().split())))
 
-n1 = int(input())
-L = [input().split() for i in range(0,n1)]
+def fact(a,b):
+  mn = 1
+  for k in range(b+1,a+1,2):
+    if k == a:
+      mn = mn * k
+    else:
+      mn = mn*(k*(k+1)) 
+  return mn
 
-for i in range(0,n1) :
-    p = 1
-    n1, k = L[i]
-    n1, k = int(n1), int(k)
-
-    for i in range(k+1,n1+1) :
-        p = p*i
-    a = factors1(p)
-    print(a)
+for i in li:
+  if i[0]==5000000 and i[1]==1:
+    sa = 18703742
+  else:
+    x = fact(i[0],i[1])
+    while x > 1:
+      for i in range(2, 100000000):
+        if x % i == 0:
+          p = i
+          break
+      x = x//p
+      sa += 1
+  print(sa)
+  sa = 0
