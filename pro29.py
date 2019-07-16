@@ -3,7 +3,7 @@ import sys,string
 def dgtSum(n1) :
     sum1 = 0
     while n1 :
-        sum1 += n%10
+        sum1 += n1%10
         n1 //= 10
     return sum1
 n1 = int(input())
