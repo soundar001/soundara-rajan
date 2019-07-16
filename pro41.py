@@ -17,7 +17,6 @@ while n1 > n0 and n0 > 0:
         break
     n1 -= 2
     n0 -= 1
-    #print(n1,n0)
     s += '110'
 if n1-n0 == 1 :
     s += '10'*n0+'1'
